@@ -20,8 +20,8 @@
     <dimen name="icon_margin">16dp</dimen>
 
     <!-- Material design typography -->
-    <dimen name="title_textsize">20sp</dimen>
-    <dimen name="content_textsize">18sp</dimen>
+    <dimen name="title_textsize">24sp</dimen>
+    <dimen name="content_textsize">20sp</dimen>
 
     <!-- DeckPicker -->
     <dimen name="deck_picker_left_padding_small">0dp</dimen>
@@ -29,14 +29,14 @@
     <dimen name="deck_picker_right_padding">4dp</dimen>
     <dimen name="note_editor_toolbar_height">52dp</dimen>
 
-    <dimen name="mtrl_snackbar_background_corner_radius">8dp</dimen>
-    <dimen name="popup_corner_radius">4dp</dimen>
-    <dimen name="dialog_corner_radius">8dp</dimen>
+    <dimen name="mtrl_snackbar_background_corner_radius">18dp</dimen>
+    <dimen name="popup_corner_radius">10dp</dimen>
+    <dimen name="dialog_corner_radius">18dp</dimen>
 
     <dimen name="reviewer_side_margin">8dp</dimen>
     <dimen name="answer_button_margin_horizontal">3dp</dimen>
-    <dimen name="study_screen_elevation">0.8dp</dimen>
-    <dimen name="answer_button_corner_radius">12dp</dimen>
-    <dimen name="reviewer_answer_button_textSize">14sp</dimen>
+    <dimen name="study_screen_elevation">4dp</dimen>
+    <dimen name="answer_button_corner_radius">20dp</dimen>
+    <dimen name="reviewer_answer_button_textSize">16sp</dimen>
     <dimen name="reviewer_mark_flag">18dp</dimen>
 </resources>

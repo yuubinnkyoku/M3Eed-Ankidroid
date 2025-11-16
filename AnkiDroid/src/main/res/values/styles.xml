@@ -130,22 +130,27 @@
         <item name="tabTextAppearance">@style/TextAppearance.Material3.LabelLarge</item>
         <item name="tabIndicator">@drawable/tab_layout_indicator_floating_pill</item>
         <item name="tabIndicatorHeight">14dp</item>
-        <item name="tabTextColor">@color/white</item>
-        <item name="tabIndicatorColor">@color/white</item>
+        <item name="tabTextColor">?attr/colorOnSurfaceVariant</item>
+        <item name="tabSelectedTextColor">?attr/tabActiveIconColor</item>
+        <item name="tabIndicatorColor">?attr/tabActiveIconColor</item>
     </style>
     <style name="ThemeOverlay.App.TabLayout" parent="">
         <item name="colorSurface">?attr/tabLayoutBackgroundColor</item> <!-- Background -->
-        <item name="colorOnSurfaceVariant">#cfff</item> <!-- Not selected text color -->
+        <item name="colorOnSurfaceVariant">?attr/colorOnSurfaceVariant</item> <!-- Not selected text color -->
+        <item name="colorOnSurface">?attr/colorOnSurface</item>
+        <item name="colorSecondaryContainer">?attr/tabLayoutBackgroundColor</item>
+        <item name="colorOnSecondaryContainer">?attr/tabActiveIconColor</item>
     </style>
 
     <style name="BottomNavigationViewStyle" parent="@style/Widget.Material3.BottomNavigationView">
         <item name="materialThemeOverlay">@style/ThemeOverlay.App.BottomNavigationView</item>
     </style>
     <style name="ThemeOverlay.App.BottomNavigationView" parent="">
+        <item name="colorSurface">?attr/colorSurface</item>
+        <item name="colorOnSurfaceVariant">?attr/colorOnSurfaceVariant</item>
+        <item name="colorOnSurface">?attr/colorOnSurface</item>
         <item name="colorSecondaryContainer">?attr/tabLayoutBackgroundColor</item> <!-- Selected item indicator -->
         <item name="colorOnSecondaryContainer">?attr/tabActiveIconColor</item> <!-- Active icon -->
-        <item name="colorOnSurface">?attr/colorPrimary</item> <!-- Active icon -->
-        <item name="colorOnSurfaceVariant">?attr/colorPrimary</item> <!-- Inactive icon & label -->
         <item name="textAppearanceTitleSmall">@style/TextAppearance.Material3.TitleSmall</item>
         <item name="textAppearanceLabelLarge">@style/TextAppearance.Material3.LabelLarge</item>
     </style>
@@ -177,6 +182,7 @@
     <!-- Snackbars -->
     <style name="SnackbarStyle" parent="Widget.Material3.Snackbar">
         <item name="android:backgroundTint">?attr/snackbarBackgroundTintColor</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Material3.Corner.ExtraLarge</item>
     </style>
     <style name="SnackbarButtonStyle" parent="Widget.Material3.Button.TextButton.Snackbar">
         <item name="android:textColor">?attr/snackbarButtonTextColor</item>

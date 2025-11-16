@@ -14,6 +14,113 @@
 -->
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="UnusedResources,DuplicateCrowdInStrings">
 
+    <!-- Expressive Material 3 palette -->
+    <color name="md_expressive_light_primary">#9C2EFF</color>
+    <color name="md_expressive_light_onPrimary">#FFFFFF</color>
+    <color name="md_expressive_light_primaryContainer">#F6D9FF</color>
+    <color name="md_expressive_light_onPrimaryContainer">#320046</color>
+    <color name="md_expressive_light_secondary">#006874</color>
+    <color name="md_expressive_light_onSecondary">#FFFFFF</color>
+    <color name="md_expressive_light_secondaryContainer">#97F0FF</color>
+    <color name="md_expressive_light_onSecondaryContainer">#001F24</color>
+    <color name="md_expressive_light_tertiary">#BD004B</color>
+    <color name="md_expressive_light_onTertiary">#FFFFFF</color>
+    <color name="md_expressive_light_tertiaryContainer">#FFD9DF</color>
+    <color name="md_expressive_light_onTertiaryContainer">#3F0013</color>
+    <color name="md_expressive_light_error">#BA1A1A</color>
+    <color name="md_expressive_light_onError">#FFFFFF</color>
+    <color name="md_expressive_light_errorContainer">#FFDAD6</color>
+    <color name="md_expressive_light_onErrorContainer">#410002</color>
+    <color name="md_expressive_light_background">#FFFBFF</color>
+    <color name="md_expressive_light_onBackground">#1D1B1E</color>
+    <color name="md_expressive_light_surface">#FFFBFF</color>
+    <color name="md_expressive_light_onSurface">#1D1B1E</color>
+    <color name="md_expressive_light_surfaceVariant">#F2DEE8</color>
+    <color name="md_expressive_light_onSurfaceVariant">#4F4349</color>
+    <color name="md_expressive_light_outline">#81737A</color>
+    <color name="md_expressive_light_outlineVariant">#D5C2CA</color>
+    <color name="md_expressive_light_surfaceTint">@color/md_expressive_light_primary</color>
+    <color name="md_expressive_light_surfaceContainerLowest">#FFFFFF</color>
+    <color name="md_expressive_light_surfaceContainerLow">#FBF0F5</color>
+    <color name="md_expressive_light_surfaceContainer">#F6E6ED</color>
+    <color name="md_expressive_light_surfaceContainerHigh">#F0DFE7</color>
+    <color name="md_expressive_light_surfaceContainerHighest">#EAD8E0</color>
+
+    <color name="md_expressive_dark_primary">#E5B6FF</color>
+    <color name="md_expressive_dark_onPrimary">#4F007D</color>
+    <color name="md_expressive_dark_primaryContainer">#6F00B2</color>
+    <color name="md_expressive_dark_onPrimaryContainer">#F6D8FF</color>
+    <color name="md_expressive_dark_secondary">#4BD9E3</color>
+    <color name="md_expressive_dark_onSecondary">#00363B</color>
+    <color name="md_expressive_dark_secondaryContainer">#004F55</color>
+    <color name="md_expressive_dark_onSecondaryContainer">#A4F6FF</color>
+    <color name="md_expressive_dark_tertiary">#FFB2C2</color>
+    <color name="md_expressive_dark_onTertiary">#5E1126</color>
+    <color name="md_expressive_dark_tertiaryContainer">#7C293C</color>
+    <color name="md_expressive_dark_onTertiaryContainer">#FFD9E1</color>
+    <color name="md_expressive_dark_error">#FFB4AB</color>
+    <color name="md_expressive_dark_onError">#690005</color>
+    <color name="md_expressive_dark_errorContainer">#93000A</color>
+    <color name="md_expressive_dark_onErrorContainer">#FFDAD6</color>
+    <color name="md_expressive_dark_background">#1D1B1E</color>
+    <color name="md_expressive_dark_onBackground">#E7E1E5</color>
+    <color name="md_expressive_dark_surface">#1D1B1E</color>
+    <color name="md_expressive_dark_onSurface">#E7E1E5</color>
+    <color name="md_expressive_dark_surfaceVariant">#504348</color>
+    <color name="md_expressive_dark_onSurfaceVariant">#D6C2CA</color>
+    <color name="md_expressive_dark_outline">#9F8D94</color>
+    <color name="md_expressive_dark_outlineVariant">#4A3C42</color>
+    <color name="md_expressive_dark_surfaceTint">@color/md_expressive_dark_primary</color>
+    <color name="md_expressive_dark_surfaceContainerLowest">#0F0D11</color>
+    <color name="md_expressive_dark_surfaceContainerLow">#181318</color>
+    <color name="md_expressive_dark_surfaceContainer">#201A1F</color>
+    <color name="md_expressive_dark_surfaceContainerHigh">#2B252A</color>
+    <color name="md_expressive_dark_surfaceContainerHighest">#362F34</color>
+
+    <color name="md_expressive_black_primary">#E5B6FF</color>
+    <color name="md_expressive_black_onPrimary">#2C003F</color>
+    <color name="md_expressive_black_primaryContainer">#45005F</color>
+    <color name="md_expressive_black_onPrimaryContainer">#F6D8FF</color>
+    <color name="md_expressive_black_secondary">#00D4C3</color>
+    <color name="md_expressive_black_onSecondary">#00201C</color>
+    <color name="md_expressive_black_secondaryContainer">#003832</color>
+    <color name="md_expressive_black_onSecondaryContainer">#63F6E5</color>
+    <color name="md_expressive_black_tertiary">#FFB78D</color>
+    <color name="md_expressive_black_onTertiary">#3A0C00</color>
+    <color name="md_expressive_black_tertiaryContainer">#551600</color>
+    <color name="md_expressive_black_onTertiaryContainer">#FFDCC7</color>
+    <color name="md_expressive_black_error">#FFB4AB</color>
+    <color name="md_expressive_black_onError">#690005</color>
+    <color name="md_expressive_black_errorContainer">#93000A</color>
+    <color name="md_expressive_black_onErrorContainer">#FFDAD6</color>
+    <color name="md_expressive_black_surface">#050506</color>
+    <color name="md_expressive_black_onSurface">#F2ECF0</color>
+    <color name="md_expressive_black_surfaceVariant">#1B191C</color>
+    <color name="md_expressive_black_onSurfaceVariant">#CFC2C7</color>
+    <color name="md_expressive_black_outline">#4C4549</color>
+    <color name="md_expressive_black_surfaceContainerLowest">#060609</color>
+    <color name="md_expressive_black_surfaceContainerLow">#0B0B0E</color>
+    <color name="md_expressive_black_surfaceContainer">#101013</color>
+    <color name="md_expressive_black_surfaceContainerHigh">#151518</color>
+    <color name="md_expressive_black_surfaceContainerHighest">#1A1A1E</color>
+
+    <!-- Expressive answer buttons -->
+    <color name="expressive_again_light">#FF4D73</color>
+    <color name="expressive_again_dark">#FF7393</color>
+    <color name="expressive_again_black">#FF5C85</color>
+    <color name="expressive_hard_light">#FFB74D</color>
+    <color name="expressive_hard_dark">#FFCA80</color>
+    <color name="expressive_hard_black">#FFB35F</color>
+    <color name="expressive_good_light">#1FC28B</color>
+    <color name="expressive_good_dark">#52D8AB</color>
+    <color name="expressive_good_black">#44E1AE</color>
+    <color name="expressive_easy_light">#2F9BFF</color>
+    <color name="expressive_easy_dark">#6AB8FF</color>
+    <color name="expressive_easy_black">#45AFFF</color>
+
+    <color name="expressive_on_dark_surface">#F2ECF0</color>
+    <color name="expressive_on_light_surface">#1D1B1E</color>
+
     <color name="wb_fg_color">#B00000FF</color>
     <color name="wb_fg_color_inv">#0099FF</color>
     <color name="transparent">#00000000</color>

@@ -11,84 +11,84 @@
 
     <style name="Base.Theme.Dark" parent="@style/Theme.Material3.Dark.NoActionBar">
         <!-- Android colors -->
-        <item name="colorPrimary">@color/material_blue_400</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <item name="colorPrimaryDark">@color/theme_dark_primary_dark</item>
-        <item name="colorSurface">?android:colorBackground</item>
-        <item name="colorAccent">@color/material_blue_400</item>
-        <item name="colorOnSurface">@color/white</item>
-        <item name="colorPrimaryContainer">@color/white</item> <!-- Switch thumb color when disabled and being pressed -->
-        <item name="colorOnPrimaryContainer">@color/white</item> <!-- FAB icons -->
+        <item name="colorPrimary">@color/md_expressive_dark_primary</item>
+        <item name="colorOnPrimary">@color/md_expressive_dark_onPrimary</item>
+        <item name="colorPrimaryDark">@color/md_expressive_dark_primaryContainer</item>
+        <item name="colorSurface">@color/md_expressive_dark_surface</item>
+        <item name="colorAccent">@color/md_expressive_dark_secondary</item>
+        <item name="colorOnSurface">@color/md_expressive_dark_onSurface</item>
+        <item name="colorPrimaryContainer">@color/md_expressive_dark_primaryContainer</item> <!-- Switch thumb color when disabled and being pressed -->
+        <item name="colorOnPrimaryContainer">@color/md_expressive_dark_onPrimaryContainer</item> <!-- FAB icons -->
 
-        <item name="android:textColor">@color/text_color_dark</item>
-        <item name="android:textColorSecondary">@color/text_color_secondary_dark</item>
-        <item name="android:colorBackground">@color/material_theme_grey</item>
-        <item name="android:windowBackground">@color/material_theme_grey</item>
+        <item name="android:textColor">@color/md_expressive_dark_onSurface</item>
+        <item name="android:textColorSecondary">@color/md_expressive_dark_onSurfaceVariant</item>
+        <item name="android:colorBackground">@color/md_expressive_dark_surface</item>
+        <item name="android:windowBackground">@color/md_expressive_dark_surface</item>
 
-        <item name="colorSurfaceContainerHighest">?attr/colorSurfaceContainer</item>
-        <item name="colorSurfaceContainerHigh">?android:attr/colorBackground</item>
-        <item name="colorSurfaceContainer">#0F42A5F5</item>
-        <item name="colorSurfaceContainerLow">?android:attr/colorBackground</item>
+        <item name="colorSurfaceContainerHighest">@color/md_expressive_dark_surfaceContainerHighest</item>
+        <item name="colorSurfaceContainerHigh">@color/md_expressive_dark_surfaceContainerHigh</item>
+        <item name="colorSurfaceContainer">@color/md_expressive_dark_surfaceContainer</item>
+        <item name="colorSurfaceContainerLow">@color/md_expressive_dark_surfaceContainerLow</item>
         <!-- Widget colors -->
         <item name="widgetColorActivated">?attr/colorAccent</item>
-        <item name="preferenceCategoryTitleTextColor">?attr/colorAccent</item>
+        <item name="preferenceCategoryTitleTextColor">@color/md_expressive_dark_secondary</item>
         <!-- Navigation drawer -->
-        <item name="navDrawerItemColor">@color/drawer_item_text_dark</item>
+        <item name="navDrawerItemColor">@color/md_expressive_dark_onSurfaceVariant</item>
         <item name="navDrawerItemBackgroundColor">@drawable/drawer_item_background_dark</item>
         <!-- Menu -->
         <item name="actionOverflowMenuStyle">@style/OverflowMenuStyle</item>
         <item name="popupMenuStyle">@style/PopupMenuStyle</item>
         <item name="spinnerStyle">@style/SpinnerStyle</item>
         <!-- Action bar styles -->
-        <item name="appBarColor">@color/theme_dark_primary</item>
+        <item name="appBarColor">@color/md_expressive_dark_surfaceContainer</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="windowActionModeOverlay">true</item>
-        <item name="actionBarTextColor">@color/white</item>
-        <item name="actionBarPopupTextColor">@color/theme_dark_primary_text</item>
-        <item name="actionModeBackground">@color/theme_dark_primary</item>
+        <item name="actionBarTextColor">@color/md_expressive_dark_onSurface</item>
+        <item name="actionBarPopupTextColor">@color/md_expressive_dark_onSurfaceVariant</item>
+        <item name="actionModeBackground">@color/md_expressive_dark_secondaryContainer</item>
         <!-- Tab layout -->
-        <item name="tabLayoutBackgroundColor">@color/theme_dark_primary</item>
-        <item name="tabActiveIconColor">@color/material_blue_500</item>
+        <item name="tabLayoutBackgroundColor">@color/md_expressive_dark_surfaceContainer</item>
+        <item name="tabActiveIconColor">@color/md_expressive_dark_onSecondaryContainer</item>
         <!-- Deck list colors and divider -->
         <item name="currentDeckBackground">@drawable/item_background_selected</item>
-        <item name="currentDeckBackgroundColor">@color/theme_dark_row_current</item>
-        <item name="focusedRowBackgroundColor">@color/theme_dark_row_current</item>
-        <item name="dynDeckColor">#6699d6</item>
+        <item name="currentDeckBackgroundColor">@color/md_expressive_dark_surfaceContainer</item>
+        <item name="focusedRowBackgroundColor">@color/md_expressive_dark_surfaceContainer</item>
+        <item name="dynDeckColor">@color/md_expressive_dark_tertiary</item>
         <item name="deckDivider">@drawable/divider_dark</item>
         <item name="expandRef">@drawable/ic_chevron_right_white</item>
         <item name="collapseRef">@drawable/ic_expand_more_white</item>
         <!-- Count colors -->
-        <item name="newCountColor">@color/material_indigo_200</item>
-        <item name="learnCountColor">@color/material_red_200</item>
-        <item name="reviewCountColor">@color/material_green_200</item>
-        <item name="buryCountColor">@color/disabled_gray_dark</item>
-        <item name="zeroCountColor">#404040</item>
+        <item name="newCountColor">@color/md_expressive_dark_secondary</item>
+        <item name="learnCountColor">@color/md_expressive_dark_tertiary</item>
+        <item name="reviewCountColor">@color/md_expressive_dark_primary</item>
+        <item name="buryCountColor">@color/md_expressive_dark_outline</item>
+        <item name="zeroCountColor">@color/md_expressive_dark_onSurfaceVariant</item>
         <!-- Study Screen colors -->
-        <item name="showAnswerButtonBackground">#22333f</item>
-        <item name="againButtonBackground">@color/material_red_800</item>
-        <item name="hardButtonBackground">@color/material_blue_grey_800</item>
-        <item name="goodButtonBackground">@color/material_green_800</item>
-        <item name="easyButtonBackground">@color/material_light_blue_800</item>
-        <item name="topBarColor">@color/theme_dark_primary_light</item>
-        <item name="maxTimerColor">@color/material_red_300</item>
-        <item name="answerButtonTextColor">@color/white</item>
-        <item name="againButtonTextColor">@color/white</item>
-        <item name="hardButtonTextColor">@color/white</item>
-        <item name="goodButtonTextColor">@color/white</item>
-        <item name="easyButtonTextColor">@color/white</item>
+        <item name="showAnswerButtonBackground">@color/md_expressive_dark_primary</item>
+        <item name="againButtonBackground">@color/expressive_again_dark</item>
+        <item name="hardButtonBackground">@color/expressive_hard_dark</item>
+        <item name="goodButtonBackground">@color/expressive_good_dark</item>
+        <item name="easyButtonBackground">@color/expressive_easy_dark</item>
+        <item name="topBarColor">@color/md_expressive_dark_surfaceContainerHigh</item>
+        <item name="maxTimerColor">@color/md_expressive_dark_error</item>
+        <item name="answerButtonTextColor">@color/expressive_on_dark_surface</item>
+        <item name="againButtonTextColor">@color/expressive_on_dark_surface</item>
+        <item name="hardButtonTextColor">@color/expressive_on_dark_surface</item>
+        <item name="goodButtonTextColor">@color/expressive_on_dark_surface</item>
+        <item name="easyButtonTextColor">@color/expressive_on_dark_surface</item>
 
-        <item name="alternativeBackgroundColor">#2a2a2a</item>
-        <item name="againTextColor">@color/material_red_200</item>
-        <item name="hardTextColor">@color/material_orange_200</item>
-        <item name="goodTextColor">@color/material_light_green_200</item>
-        <item name="easyTextColor">@color/material_light_blue_A100</item>
-        <item name="againBackgroundColor">#462828</item>
-        <item name="hardBackgroundColor">#4e3122</item>
-        <item name="goodBackgroundColor">#2c3b2c</item>
-        <item name="easyBackgroundColor">#223946</item>
+        <item name="alternativeBackgroundColor">@color/md_expressive_dark_surfaceContainer</item>
+        <item name="againTextColor">@color/md_expressive_dark_tertiary</item>
+        <item name="hardTextColor">@color/md_expressive_dark_secondary</item>
+        <item name="goodTextColor">@color/md_expressive_dark_primary</item>
+        <item name="easyTextColor">@color/md_expressive_dark_secondaryContainer</item>
+        <item name="againBackgroundColor">@color/md_expressive_dark_tertiaryContainer</item>
+        <item name="hardBackgroundColor">@color/md_expressive_dark_secondaryContainer</item>
+        <item name="goodBackgroundColor">@color/md_expressive_dark_primaryContainer</item>
+        <item name="easyBackgroundColor">@color/md_expressive_dark_secondaryContainer</item>
         <!-- Study Screen button drawables -->
-        <item name="showAnswerColor">@color/material_blue_grey_800</item>
+        <item name="showAnswerColor">@color/md_expressive_dark_secondary</item>
         <item name="againButtonRef">@drawable/footer_button_again_dark</item>
         <item name="hardButtonRef">@drawable/footer_button_hard_dark</item>
         <item name="goodButtonRef">@drawable/footer_button_good_dark</item>
@@ -98,24 +98,24 @@
         <item name="goodButtonRippleRef">@drawable/footer_button_ripple</item>
         <item name="easyButtonRippleRef">@drawable/footer_button_ripple</item>
         <!-- Card Browser Colors -->
-        <item name="cardBrowserDivider">@color/white</item>
+        <item name="cardBrowserDivider">@color/md_expressive_dark_outline</item>
         <!-- Browser colors -->
-        <item name="suspendedColor">@color/material_grey_700</item>
-        <item name="buriedColor">#612B09</item>
-        <item name="markedColor">@color/material_deep_purple_400</item>
+        <item name="suspendedColor">@color/md_expressive_dark_secondaryContainer</item>
+        <item name="buriedColor">@color/md_expressive_dark_tertiaryContainer</item>
+        <item name="markedColor">@color/md_expressive_dark_primaryContainer</item>
         <!-- Note editor colors -->
-        <item name="duplicateColor">#855</item>
-        <item name="editTextBackgroundColor">#EE5C5C5C</item>
-        <item name="editTextHighlightColor">@color/material_light_blue_900</item>
-        <item name="toolbarBackgroundColor">#616161</item>
-        <item name="toolbarIconColor">@color/white</item>
-        <item name="buttonShadowColor">#bdbdbd</item>
-        <item name="buttonRippleColor">#BABABA</item>
-        <item name="buttonForegroundColor">#757575</item>
+        <item name="duplicateColor">@color/md_expressive_dark_errorContainer</item>
+        <item name="editTextBackgroundColor">@color/md_expressive_dark_surfaceContainer</item>
+        <item name="editTextHighlightColor">@color/md_expressive_dark_primary</item>
+        <item name="toolbarBackgroundColor">@color/md_expressive_dark_surfaceContainerHigh</item>
+        <item name="toolbarIconColor">@color/md_expressive_dark_onSurface</item>
+        <item name="buttonShadowColor">@color/md_expressive_dark_outlineVariant</item>
+        <item name="buttonRippleColor">@color/md_expressive_dark_outline</item>
+        <item name="buttonForegroundColor">@color/md_expressive_dark_surfaceContainer</item>
         <!-- FAB -->
-        <item name="fab_normal">@color/material_light_blue_700</item>
-        <item name="fab_pressed">@color/material_light_blue_900</item>
-        <item name="fab_labelsTextColor">@color/white</item>
+        <item name="fab_normal">@color/md_expressive_dark_primary</item>
+        <item name="fab_pressed">@color/md_expressive_dark_secondary</item>
+        <item name="fab_labelsTextColor">@color/expressive_on_dark_surface</item>
         <item name="fab_item_background">@drawable/fab_label_background</item>
         <!-- Images -->
         <item name="navDrawerImage">@drawable/nav_drawer_logo_dark_theme</item>
@@ -125,17 +125,16 @@
         <item name="android:dialogCornerRadius" tools:targetApi="p">@dimen/dialog_corner_radius</item>
         <item name="textAllCaps">false</item>
         <!--Custom Tabs colors-->
-        <item name="customTabNavBarColor">@color/material_grey_800</item>
-        <item name="popupBackgroundColor">@color/popup_background_theme_dark</item>
-        <item name="editTextDisabled">@color/material_grey_500</item>
-        <item name="overflowAndPopupMenuIconColor">#9effffff</item>
+        <item name="customTabNavBarColor">@color/md_expressive_dark_surface</item>
+        <item name="popupBackgroundColor">@color/md_expressive_dark_surfaceContainer</item>
+        <item name="editTextDisabled">@color/md_expressive_dark_outline</item>
+        <item name="overflowAndPopupMenuIconColor">@color/md_expressive_dark_onSurfaceVariant</item>
         <!-- StatusBar -->
-        <item name="android:statusBarColor">@color/theme_dark_primary</item>
+        <item name="android:statusBarColor">@color/md_expressive_dark_surface</item>
         <item name="android:windowLightStatusBar">false</item>
         <!-- Navbar -->
-        <item name="android:navigationBarColor">@color/material_theme_grey</item>
+        <item name="android:navigationBarColor">@color/md_expressive_dark_surfaceContainerLow</item>
         <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">false</item>
-        <item name="android:navigationBarColor">@color/black</item>
 
         <!-- Snackbar. Attributes snackbarStyle, snackbarTextViewStyle and snackbarButtonStyle
              must be *all* present in a theme (or its parent) in order for the snackbar
@@ -143,11 +142,11 @@
         <item name="snackbarStyle">@style/SnackbarStyle</item>
         <item name="snackbarTextViewStyle">@style/Widget.MaterialComponents.Snackbar.TextView</item>
         <item name="snackbarButtonStyle">@style/SnackbarButtonStyle</item>
-        <item name="snackbarBackgroundTintColor">#cfcfcf</item>
-        <item name="snackbarButtonTextColor">@color/material_light_blue_900</item>
+        <item name="snackbarBackgroundTintColor">@color/md_expressive_dark_surfaceContainerHigh</item>
+        <item name="snackbarButtonTextColor">@color/md_expressive_dark_primary</item>
 
         <!-- Introduction -->
-        <item name="introductionLogoTransparent">#883d3d3d</item>
+        <item name="introductionLogoTransparent">#88463A3A</item>
 
         <!-- Widget styles -->
         <item name="switchPreferenceCompatStyle">@style/Preference.SwitchPreferenceCompat.Material3</item>
@@ -155,15 +154,15 @@
         <item name="preferenceTheme">@style/PreferenceThemeOverlay.AnkiDroid</item>
 
         <!-- ProgressDialog-->
-        <item name="dialogBackground">#ff303030</item>
-        <item name="progressDialogButtonTextColor">@color/material_light_blue_400</item>
+        <item name="dialogBackground">@color/md_expressive_dark_surface</item>
+        <item name="progressDialogButtonTextColor">@color/md_expressive_dark_primary</item>
 
-        <item name="checkMediaListBackground">@color/material_grey_700</item>
-        <item name="checkMediaListForeground">@color/white</item>
+        <item name="checkMediaListBackground">@color/md_expressive_dark_surfaceContainer</item>
+        <item name="checkMediaListForeground">@color/md_expressive_dark_onSurface</item>
 
         <!-- AlertDialogTheme-->
         <item name="alertDialogTheme">@style/ThemeOverlay.AnkiDroid.AlertDialog</item>
-        <item name="tabStyle">@style/Widget.MaterialComponents.TabLayout</item>
+        <item name="tabStyle">@style/TabLayoutStyle</item>
 
         <item name="bottomSheetDialogTheme">@style/ThemeOverlay.App.BottomSheetDialog</item>
     </style>
