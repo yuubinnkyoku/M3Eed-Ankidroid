@@ -62,17 +62,82 @@ jobs:
       - name: Credential Prep
         if: "${{ github.event.inputs.public != '' }}" # publicリリースの場合のみ認証情報を準備
         run: |
+          set -euo pipefail
           echo "KEYSTOREPATH=$HOME/src/android-keystore" >> $GITHUB_ENV
           echo "KEYALIAS=nrkeystorealias" >> $GITHUB_ENV
           echo "KEYSTOREPWD=DUMMY_KEYSTORE_PASSWORD" >> $GITHUB_ENV # ダミー値
           echo "KEYPWD=DUMMY_KEYSTORE_KEY_PASSWORD" >> $GITHUB_ENV # ダミー値
-          mkdir ~/src
+          mkdir -p ~/src
           cd ~/src
-          echo "DUMMY_AMAZON_PUBLISH_CREDENTIALS" | base64 -d > ./AnkiDroid-Amazon-Publish-Security-Profile.json.gz # ダミー値
-          echo "DUMMY_GOOGLE_PUBLISH_CREDENTIALS" | base64 -d > ./AnkiDroid-GCP-Publish-Credentials.json.gz # ダミー値
-          echo "DUMMY_RELEASES_PUBLISH_TOKEN" | base64 -d > ./my-github-personal-access-token.gz # ダミー値
-          echo "DUMMY_KEYSTORE" | base64 -d > ./android-keystore.gz # ダミー値
-          gunzip *.gz
+
+          # Functions to write secrets robustly:
+          write_secret_as_gz() {
+            local secret_value="$1"
+            local out_gz="$2"
+            local tmp
+            tmp=$(mktemp)
+            # Try to decode base64 into tmp
+            if printf '%s' "$secret_value" | base64 -d > "$tmp" 2>/dev/null; then
+              # If decoded output is a gzip archive, keep it as-is
+              if gzip -t "$tmp" >/dev/null 2>&1; then
+                mv "$tmp" "$out_gz"
+                return 0
+              else
+                # Decoded content isn't gzip, compress it
+                gzip -c "$tmp" > "$out_gz"
+                rm -f "$tmp"
+                return 0
+              fi
+            else
+              # Not base64: write raw and compress
+              printf '%s' "$secret_value" | sed 's/\r$//' | gzip > "$out_gz"
+              rm -f "$tmp"
+              return 0
+            fi
+          }
+
+          write_secret_as_plain() {
+            local secret_value="$1"
+            local out_file="$2"
+            # If it decodes as base64, decode it; otherwise write raw
+            if printf '%s' "$secret_value" | base64 -d >/dev/null 2>&1; then
+              printf '%s' "$secret_value" | base64 -d > "$out_file"
+            else
+              printf '%s' "$secret_value" | sed 's/\r$//' > "$out_file"
+            fi
+          }
+
+          # Amazon / Google publish credentials are expected as .json.gz in the release script.
+          if [ -n "${{ secrets.AMAZON_PUBLISH_CREDENTIALS }}" ]; then
+            write_secret_as_gz "${{ secrets.AMAZON_PUBLISH_CREDENTIALS }}" ./AnkiDroid-Amazon-Publish-Security-Profile.json.gz
+          else
+            echo "Warning: AMAZON_PUBLISH_CREDENTIALS not set" >&2
+          fi
+
+          if [ -n "${{ secrets.GOOGLE_PUBLISH_CREDENTIALS }}" ]; then
+            write_secret_as_gz "${{ secrets.GOOGLE_PUBLISH_CREDENTIALS }}" ./AnkiDroid-GCP-Publish-Credentials.json.gz
+          else
+            echo "Warning: GOOGLE_PUBLISH_CREDENTIALS not set" >&2
+          fi
+
+          # The Releases publish token is expected as a plain token file; try to decode base64 if encoded, otherwise write raw
+          if [ -n "${{ secrets.RELEASES_PUBLISH_TOKEN }}" ]; then
+            write_secret_as_plain "${{ secrets.RELEASES_PUBLISH_TOKEN }}" ./my-github-personal-access-token
+          else
+            echo "Warning: RELEASES_PUBLISH_TOKEN not set" >&2
+          fi
+
+          # Keystore may be passed in as base64-encoded data or raw; produce a gz archive for later gunzip step
+          if [ -n "${{ secrets.KEYSTORE }}" ]; then
+            write_secret_as_gz "${{ secrets.KEYSTORE }}" ./android-keystore.gz
+          else
+            echo "Warning: KEYSTORE secret not set" >&2
+          fi
+
+          # If we still have gz files, extract them so release.sh can find plain files
+          if ls *.gz >/dev/null 2>&1; then
+            gunzip -f *.gz || true
+          fi
         shell: bash
 
       - name: Build and Release public release
