@@ -121,8 +121,9 @@ fi
 git push
 git push --tags
 
-# Build the full set of release APKs for all flavors, with universals
-UCFLAVORS='Full Amazon Play'
+# Build the full set of release APKs for needed flavors, with universals
+# Play flavor builds are skipped for this fork (GitHub releases only)
+UCFLAVORS='Full Amazon'
 for UCFLAVOR in $UCFLAVORS; do
   ./gradlew --stop
   echo Running assemble"$UCFLAVOR"Release target with universal APK flag
@@ -147,8 +148,8 @@ for ABI in $ABIS; do
   cp AnkiDroid/build/outputs/apk/full/release/AnkiDroid-full-"$ABI"-release.apk "$PREFIX"AnkiDroid-"$VERSION"-"$ABI".apk
 done
 
-# Copy universal APKs for all flavors to cwd
-FLAVORS='full amazon play'
+# Copy universal APKs for selected flavors to cwd (Play excluded)
+FLAVORS='full amazon'
 for FLAVOR in $FLAVORS; do
   if [ "$FLAVOR" = "full" ]; then
     PREFIX=""
