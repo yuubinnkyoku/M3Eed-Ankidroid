@@ -53,21 +53,21 @@ jobs:
       - uses: webfactory/ssh-agent@v0.9.1
         if: "${{ github.event.inputs.public != '' }}" # publicリリースの場合のみSSHキーを使用
         with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          ssh-private-key: DUMMY_SSH_PRIVATE_KEY # ダミー値
 
       - name: Credential Prep
         if: "${{ github.event.inputs.public != '' }}" # publicリリースの場合のみ認証情報を準備
         run: |
           echo "KEYSTOREPATH=$HOME/src/android-keystore" >> $GITHUB_ENV
           echo "KEYALIAS=nrkeystorealias" >> $GITHUB_ENV
-          echo "KEYSTOREPWD=${{ secrets.KEYSTORE_PASSWORD }}" >> $GITHUB_ENV
-          echo "KEYPWD=${{ secrets.KEYSTORE_KEY_PASSWORD }}" >> $GITHUB_ENV
+          echo "KEYSTOREPWD=DUMMY_KEYSTORE_PASSWORD" >> $GITHUB_ENV # ダミー値
+          echo "KEYPWD=DUMMY_KEYSTORE_KEY_PASSWORD" >> $GITHUB_ENV # ダミー値
           mkdir ~/src
           cd ~/src
-          echo "${{ secrets.AMAZON_PUBLISH_CREDENTIALS }}" | base64 -d > ./AnkiDroid-Amazon-Publish-Security-Profile.json.gz
-          echo "${{ secrets.GOOGLE_PUBLISH_CREDENTIALS }}" | base64 -d > ./AnkiDroid-GCP-Publish-Credentials.json.gz
-          echo "${{ secrets.RELEASES_PUBLISH_TOKEN }}" | base64 -d > ./my-github-personal-access-token.gz
-          echo "${{ secrets.KEYSTORE }}" | base64 -d > ./android-keystore.gz
+          echo "DUMMY_AMAZON_PUBLISH_CREDENTIALS" | base64 -d > ./AnkiDroid-Amazon-Publish-Security-Profile.json.gz # ダミー値
+          echo "DUMMY_GOOGLE_PUBLISH_CREDENTIALS" | base64 -d > ./AnkiDroid-GCP-Publish-Credentials.json.gz # ダミー値
+          echo "DUMMY_RELEASES_PUBLISH_TOKEN" | base64 -d > ./my-github-personal-access-token.gz # ダミー値
+          echo "DUMMY_KEYSTORE" | base64 -d > ./android-keystore.gz # ダミー値
           gunzip *.gz
         shell: bash
 
