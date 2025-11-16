@@ -17,8 +17,8 @@
         <item name="colorSurface">@color/md_expressive_dark_surface</item>
         <item name="colorAccent">@color/md_expressive_dark_secondary</item>
         <item name="colorOnSurface">@color/md_expressive_dark_onSurface</item>
-        <item name="colorPrimaryContainer">@color/md_expressive_dark_primaryContainer</item> <!-- Switch thumb color when disabled and being pressed -->
-        <item name="colorOnPrimaryContainer">@color/md_expressive_dark_onPrimaryContainer</item> <!-- FAB icons -->
+        <item name="colorPrimaryContainer">@color/md_expressive_dark_primaryContainer</item>        <!-- Switch thumb color when disabled and being pressed -->
+        <item name="colorOnPrimaryContainer">@color/md_expressive_dark_onPrimaryContainer</item>        <!-- FAB icons -->
 
         <item name="android:textColor">@color/md_expressive_dark_onSurface</item>
         <item name="android:textColorSecondary">@color/md_expressive_dark_onSurfaceVariant</item>

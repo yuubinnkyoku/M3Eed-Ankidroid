@@ -63,7 +63,7 @@
         <item name="android:textSize">14sp</item>
         <item name="android:typeface">sans</item>
     </style>
-    <style name="FooterButtonEaseText" parent="FooterButtonEaseTextBase" >
+    <style name="FooterButtonEaseText" parent="FooterButtonEaseTextBase">
         <item name="android:fontFamily">@string/font_fontFamily_medium</item>
     </style>
 
@@ -135,8 +135,8 @@
         <item name="tabIndicatorColor">?attr/tabActiveIconColor</item>
     </style>
     <style name="ThemeOverlay.App.TabLayout" parent="">
-        <item name="colorSurface">?attr/tabLayoutBackgroundColor</item> <!-- Background -->
-        <item name="colorOnSurfaceVariant">?attr/colorOnSurfaceVariant</item> <!-- Not selected text color -->
+        <item name="colorSurface">?attr/tabLayoutBackgroundColor</item>        <!-- Background -->
+        <item name="colorOnSurfaceVariant">?attr/colorOnSurfaceVariant</item>        <!-- Not selected text color -->
         <item name="colorOnSurface">?attr/colorOnSurface</item>
         <item name="colorSecondaryContainer">?attr/tabLayoutBackgroundColor</item>
         <item name="colorOnSecondaryContainer">?attr/tabActiveIconColor</item>
@@ -149,8 +149,8 @@
         <item name="colorSurface">?attr/colorSurface</item>
         <item name="colorOnSurfaceVariant">?attr/colorOnSurfaceVariant</item>
         <item name="colorOnSurface">?attr/colorOnSurface</item>
-        <item name="colorSecondaryContainer">?attr/tabLayoutBackgroundColor</item> <!-- Selected item indicator -->
-        <item name="colorOnSecondaryContainer">?attr/tabActiveIconColor</item> <!-- Active icon -->
+        <item name="colorSecondaryContainer">?attr/tabLayoutBackgroundColor</item>        <!-- Selected item indicator -->
+        <item name="colorOnSecondaryContainer">?attr/tabActiveIconColor</item>        <!-- Active icon -->
         <item name="textAppearanceTitleSmall">@style/TextAppearance.Material3.TitleSmall</item>
         <item name="textAppearanceLabelLarge">@style/TextAppearance.Material3.LabelLarge</item>
     </style>

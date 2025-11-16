@@ -9,8 +9,8 @@
         <item name="colorSurface">@color/md_expressive_light_surface</item>
         <item name="colorOnSurface">@color/md_expressive_light_onSurface</item>
         <item name="colorAccent">@color/md_expressive_light_secondary</item>
-        <item name="colorPrimaryContainer">@color/md_expressive_light_primaryContainer</item> <!-- Switch thumb color when disabled and being pressed -->
-        <item name="colorOnPrimaryContainer">@color/md_expressive_light_onPrimaryContainer</item> <!-- FAB icons -->
+        <item name="colorPrimaryContainer">@color/md_expressive_light_primaryContainer</item>        <!-- Switch thumb color when disabled and being pressed -->
+        <item name="colorOnPrimaryContainer">@color/md_expressive_light_onPrimaryContainer</item>        <!-- FAB icons -->
 
         <item name="colorSurfaceContainerHighest">@color/md_expressive_light_surfaceContainerHighest</item>
         <item name="colorSurfaceContainerHigh">@color/md_expressive_light_surfaceContainerHigh</item>
