@@ -16,6 +16,7 @@
 # Suffix configuration
 SUFFIX=""
 PUBLIC=$1
+SKIP_PLAY_NORMALIZED=$(printf '%s' "${SKIP_PLAY:-true}" | tr 'A-Z' 'a-z')
 
 # Make sure we can find our binaries
 export PATH="$HOME/bin:$PATH"
@@ -105,7 +106,7 @@ git tag v"$VERSION"
 # Build signed APK using Gradle and publish to Play, unless SKIP_PLAY is set.
 # Do this before building universal of the play flavor so the universal is not uploaded to Play Store
 # Configuration for pushing to Play specified in build.gradle.kts 'play' task
-if [ "${SKIP_PLAY:-false}" != "true" ]; then
+if [ "$SKIP_PLAY_NORMALIZED" != "true" ]; then
   echo "Running 'publishPlayReleaseApk' gradle target"
   ./gradlew --stop
   if ! ./gradlew publishPlayReleaseApk

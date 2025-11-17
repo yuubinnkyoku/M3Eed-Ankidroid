@@ -25,6 +25,8 @@ jobs:
     name: "Release App"
     timeout-minutes: 120
     runs-on: ubuntu-latest
+    env:
+      SKIP_PLAY: ${{ github.event.inputs.skip_play != '' && github.event.inputs.skip_play || 'true' }}
     steps:
       - uses: actions/checkout@v5
 
@@ -142,8 +144,6 @@ jobs:
 
       - name: Build and Release public release
         if: "${{ github.event.inputs.public != '' }}"
-        env:
-          SKIP_PLAY: ${{ github.event.inputs.skip_play }}
         run: |
           pushd ../
           # Use HTTPS clone to avoid SSH key requirement for cloning public docs repo
@@ -155,3 +155,4 @@ jobs:
       - name: Build and Release test release
         if: "${{ github.event.inputs.public == '' }}"
         run: ./tools/release.sh
+        shell: bash
